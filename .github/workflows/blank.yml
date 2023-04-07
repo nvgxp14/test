@@ -1,7 +1,7 @@
 name: Node.js CI
 
 on:
-  repository_dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '5 12 * * 0'
 
