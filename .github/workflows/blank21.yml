@@ -5,13 +5,18 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+     inputs:
+       ALERT_SCOPE:
+           description: 'Test scenario tags'
+           required: true
+           type: string
+       ALERT_TITLE:
+           description: 'Test scenario tags'
+           required: true
+           type: string
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,7 +32,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world! ${{ inputs.ALERT_SCOPE}} ${{ inputs.ALERT_TITLE}}
       - name: Env
         id: parse-env
         shell: bash
