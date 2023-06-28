@@ -1,6 +1,6 @@
 {
 
-"gautam.paritala@paritalagt@gmail.com":"test",
+"paritalagt@gmail.com":"test",
   "gautam.paritala@peapoddigitallabs.com": "Please check your ticket"
 
 }
